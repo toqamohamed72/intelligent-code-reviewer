@@ -127,18 +127,4 @@ The static layer alone finds **5 of the 16** planted bugs (all mechanical Python
 division by zero, missing `await`, unclosed resources, all of the JavaScript and Java issues) is the model's job,
 and measuring it requires your API key. See `docs/TESTING_AND_EVALUATION.md`.
 
-## Limitations (read before presenting)
 
-- **Not verified against a live model.** The build environment had no access to the Gemini or OpenAI APIs. API
-  behaviour is covered with simulated responses and errors; the real SDK clients, retries and error translation
-  were also exercised with no network, which produced the expected "could not reach the API" outcome. Run
-  `python review.py --doctor --ping` first on your machine.
-- **Review quality is the model's, not the tool's.** The tool enforces format, grounds the model with static facts
-  and verifies syntax; it cannot prove the refactored code is *correct*. Read the diff and run your own tests.
-- **Syntax verification covers Python (always) and JavaScript (if Node.js is installed).** Java and the rest are
-  reported as "not compiled".
-- **Static pre-checks exist for Python only.**
-- **Large files** are reviewed chunk by chunk; bugs spanning chunks can be missed.
-- **Prompt injection** inside reviewed code is mitigated (random fence markers, "untrusted data" rule, strict output
-  validation) but not eliminated.
-- Token counts for budgeting are estimates (about 3.5 characters per token), not a tokenizer.
