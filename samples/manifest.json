@@ -1,0 +1,24 @@
+{
+  "inventory.py": [
+    {"line": 4,  "category": "LOGIC",          "what": "mutable default argument"},
+    {"line": 11, "category": "LOGIC",          "what": "off-by-one in range(len(prices) + 1)"},
+    {"line": 13, "category": "LOGIC",          "what": "division by zero when prices is empty"},
+    {"line": 18, "category": "SECURITY",       "what": "SQL injection through f-string"},
+    {"line": 23, "category": "ERROR_HANDLING", "what": "file handle never closed"},
+    {"line": 26, "category": "SECURITY",       "what": "eval on file content"},
+    {"line": 27, "category": "ERROR_HANDLING", "what": "bare except"},
+    {"line": 32, "category": "LOGIC",          "what": "identity comparison with a string literal"}
+  ],
+  "cart.js": [
+    {"line": 3,  "category": "LOGIC",          "what": "loop runs one past the end (<=)"},
+    {"line": 10, "category": "LOGIC",          "what": "fetch is not awaited"},
+    {"line": 11, "category": "LOGIC",          "what": "res.json() is not awaited"},
+    {"line": 12, "category": "LOGIC",          "what": "loose equality =="}
+  ],
+  "Calculator.java": [
+    {"line": 5,  "category": "LOGIC",          "what": "integer division by zero is not guarded"},
+    {"line": 9,  "category": "LOGIC",          "what": "string compared with =="},
+    {"line": 13, "category": "ERROR_HANDLING", "what": "reader is never closed"},
+    {"line": 15, "category": "LOGIC",          "what": "line may be null before trim()"}
+  ]
+}

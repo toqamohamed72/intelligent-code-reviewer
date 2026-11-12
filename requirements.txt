@@ -1,0 +1,7 @@
+# Runtime dependencies (tested on 2026-11-10 with the versions noted)
+google-genai>=3.0,<4     # Google GenAI SDK (default provider)
+openai>=3.0,<4           # optional provider
+rich>=13                 # terminal markdown + syntax highlighting
+tenacity>=8.2            # retries with randomized exponential backoff
+python-dotenv>=1.0       # load .env
+streamlit>=1.67          # optional web interface
